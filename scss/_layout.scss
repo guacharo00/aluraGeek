@@ -1,0 +1,145 @@
+@use "base" as *;
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  @media screen and (min-width: 660px) {
+  }
+}
+
+.head {
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: 660px) {
+      flex-direction: row;
+    }
+
+    &-logo {
+      flex: 1;
+
+      @media screen and (min-width: 660px) {
+        flex: 0 0 20%;
+      }
+    }
+
+    &-link {
+      display: block;
+      width: 75%;
+      font-size: 2rem;
+    }
+
+    &-login {
+      flex: 1.5;
+
+      @media screen and (min-width: 660px) {
+        order: 3;
+        flex: 1;
+
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    &-btn {
+      color: var(--clr-primary);
+      font-size: 1.6rem;
+      //   transition: all 0.5s;
+      padding-left: 6rem;
+      padding-right: 6rem;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--clr-primary);
+      }
+    }
+    &-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    &-search {
+      input {
+        width: 100%;
+        display: none;
+        padding: 1rem 4rem;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        background-color: #f2f2f2;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      a {
+        display: block;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        font-size: 2.5rem;
+        color: var(--clr-gray-dark);
+      }
+
+      @media screen and (min-width: 660px) {
+        flex: 1;
+        order: 2;
+        input {
+          display: block;
+        }
+
+        a {
+          position: absolute;
+          top: 50%;
+          right: 1rem;
+          padding: 0;
+          margin: 0;
+          transform: translateY(-50%);
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &__hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../images/hero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 8rem;
+
+    @media screen and (min-width: 660px) {
+      padding-top: 12rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 16rem;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    &-paragraph {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    &-btn {
+      background-color: var(--clr-primary);
+      color: #fff;
+      margin-bottom: 1rem;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--clr-primary);
+      }
+    }
+  }
+}
