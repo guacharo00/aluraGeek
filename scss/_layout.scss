@@ -143,3 +143,16 @@
     }
   }
 }
+
+.foot {
+  padding: 4rem 6em;
+  &__text {
+    text-align: center;
+    font-size: 1.4rem;
+
+    span {
+      color: var(--clr-primary);
+      font-weight: 700;
+    }
+  }
+}

@@ -22,16 +22,22 @@
     margin-bottom: 1rem;
 
     &-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.7);
     }
 
     &-link {
       display: flex;
       align-items: center;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 500;
       color: var(--clr-primary);
+      transform: scale(1, 1);
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
     }
   }
   &__box {
@@ -50,7 +56,7 @@
     &--name {
       font-weight: 400;
       margin-top: 1rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: rgba(0, 0, 0, 0.7);
     }
 
@@ -64,7 +70,7 @@
 
     &--link {
       font-weight: 500;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: var(--clr-primary);
     }
   }
@@ -72,11 +78,35 @@
   &__contact {
     background-color: var(--clr-contact);
     padding-top: 2rem;
+    padding-bottom: 5rem;
 
     &-box {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media screen and (min-width: 660px) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 6rem;
+      }
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (min-width: 660px) {
+        flex-basis: 60%;
+        align-items: flex-start;
+      }
+
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 80%;
+      }
     }
 
     &-logo {
@@ -88,12 +118,29 @@
       flex-direction: column;
       align-items: center;
       margin-top: 2rem;
+
+      @media screen and (min-width: 660px) {
+        align-items: flex-start;
+      }
+      @media screen and (min-width: 1024px) {
+        margin-top: 0;
+      }
     }
 
     &-link {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: rgba(0, 0, 0, 0.7);
       margin-bottom: 1.5rem;
+      transform: scale(1, 1);
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+
+      @media screen and (min-width: 660px) {
+        margin-bottom: 2rem;
+      }
     }
 
     &-subtitle {
@@ -101,6 +148,10 @@
       color: rgba(0, 0, 0, 0.7);
       margin-bottom: 1rem;
       margin-top: 3rem;
+
+      @media screen and (min-width: 660px) {
+        margin-top: 0;
+      }
     }
 
     &-form {
@@ -124,6 +175,7 @@
 
         textarea {
           padding: 3.5rem 1rem;
+          resize: none;
         }
       }
     }
