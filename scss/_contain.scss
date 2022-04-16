@@ -1,0 +1,142 @@
+@use "base" as *;
+
+.contain {
+  &__starwars,
+  &__consolas,
+  &__diversos {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &-title {
+      font-size: 2.5rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--clr-primary);
+    }
+  }
+  &__box {
+    &:nth-last-child(-n + 2) {
+      display: none;
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      height: 18vh;
+    }
+    &--name {
+      font-weight: 400;
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    &--price {
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    &--link {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: var(--clr-primary);
+    }
+  }
+
+  &__contact {
+    background-color: var(--clr-contact);
+    padding-top: 2rem;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-logo {
+      flex: 0 0 25%;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    &-link {
+      font-size: 2rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    &-subtitle {
+      font-size: 2rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+    }
+
+    &-form {
+      width: 100%;
+      form {
+        input[type="text"],
+        textarea {
+          margin-bottom: 1.5rem;
+          border: none;
+          outline: none;
+          padding: 2.5rem 1rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          border-radius: 3px;
+
+          &::placeholder {
+            font-family: var(--font-stack);
+            font-size: 1.8rem;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+
+        textarea {
+          padding: 3.5rem 1rem;
+        }
+      }
+    }
+
+    &-btn {
+      background-color: var(--clr-primary);
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--clr-primary);
+      }
+    }
+  }
+}

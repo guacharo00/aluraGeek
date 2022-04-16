@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 :root {
   --clr-primary: #2a7ae4;
   --clr-dark-gray: #464646;
+  --clr-contact: #eaf2fd;
 
-  --font-stack: "Open Sans", sans-serif;
+  --font-stack: "Raleway", sans-serif;
 }
 
 *,
@@ -22,6 +23,12 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
 }
 
 html {

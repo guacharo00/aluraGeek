@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 :root {
   --clr-primary: #2a7ae4;
   --clr-dark-gray: #464646;
-  --font-stack: "Open Sans", sans-serif;
+  --clr-contact: #eaf2fd;
+  --font-stack: "Raleway", sans-serif;
 }
 
 *,
@@ -23,6 +24,12 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
 }
 
 html {
@@ -49,6 +56,123 @@ body {
   padding: 1.2rem 2rem;
   border: 1px solid var(--clr-primary);
   transition: all 0.5s;
+}
+
+.contain__starwars, .contain__consolas, .contain__diversos {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+.contain__boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+.contain__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contain__header-title {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.contain__header-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--clr-primary);
+}
+.contain__box:nth-last-child(-n+2) {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .contain__box:nth-last-child(-n+2) {
+    display: block;
+  }
+}
+.contain__box img {
+  object-fit: cover;
+  height: 18vh;
+}
+.contain__box--name {
+  font-weight: 400;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.contain__box--price {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.contain__box--link {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--clr-primary);
+}
+.contain__contact {
+  background-color: var(--clr-contact);
+  padding-top: 2rem;
+}
+.contain__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contain__contact-logo {
+  flex: 0 0 25%;
+}
+.contain__contact-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.contain__contact-link {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.5rem;
+}
+.contain__contact-subtitle {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.contain__contact-form {
+  width: 100%;
+}
+.contain__contact-form form input[type=text],
+.contain__contact-form form textarea {
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+.contain__contact-form form input[type=text]::placeholder,
+.contain__contact-form form textarea::placeholder {
+  font-family: var(--font-stack);
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.contain__contact-form form textarea {
+  padding: 3.5rem 1rem;
+}
+.contain__contact-btn {
+  background-color: var(--clr-primary);
+  color: #fff;
+  cursor: pointer;
+}
+.contain__contact-btn:hover {
+  background-color: transparent;
+  color: var(--clr-primary);
 }
 
 .container {
