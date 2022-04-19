@@ -1,0 +1,28 @@
+.contain {
+  &__productos {
+    padding-top: 3rem;
+  }
+
+  &__header-productos {
+    .btn {
+      background-color: var(--clr-primary);
+      color: #fff;
+    }
+  }
+
+  &__box {
+    position: relative;
+    &-icons {
+      position: absolute;
+      top: 5px;
+      right: 2px;
+      ion-icon {
+        font-size: 1.7rem;
+        margin-right: 0.7rem;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

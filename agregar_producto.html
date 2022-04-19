@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Geek | Best offerts every day</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header class="head">
+      <div class="head__navigation container">
+        <div class="head__navigation-logo">
+          <a href="index.html" class="head__navigation-link">
+            <img src="images/Logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="head__navigation-login">
+          <a class="btn head__navigation-btn" href="#">Login</a>
+        </div>
+        <div class="head__navigation-search">
+          <div class="head__navigation-wrapper">
+            <input type="search" placeholder="Que deseas buscar?" />
+            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main class="contain">
+      <div class="container contain__producto-container">
+        <section class="contain__agregar">
+          <form action="">
+            <h3 class="contain__agregar-title">Agregar nuevo producto</h3>
+            <div class="contain__agregar-group">
+              <div class="contain__agregar-box">
+                <div name="addImage" id="" class="contain__agregar-img">
+                  <p class="mobile-p">Agregar una imagen para el producto</p>
+                  <p class="tablet-p">
+                    Arrastre para agregar una imagen para el producto
+                  </p>
+                </div>
+                <ion-icon class="add-icon" name="add-outline"></ion-icon>
+                <ion-icon class="img-icon" name="image-outline"></ion-icon>
+              </div>
+              <div class="contain__agregar-button">
+                <p>O</p>
+                <button class="btn contain__agregar-dispositivo">
+                  Busque en su dispositivo
+                </button>
+              </div>
+            </div>
+            <input
+              class="contain__agregar-input"
+              type="text"
+              placeholder="Nombre del producto"
+            />
+            <input
+              class="contain__agregar-input"
+              type="text"
+              placeholder="Precio del producto"
+            />
+            <textarea
+              name="desc"
+              id=""
+              class="contain__agregar-desc"
+              placeholder="Descripcion del producto"
+            ></textarea>
+            <button type="submit" class="btn contain__agregar-btn">
+              Agregar producto
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <!-- Inicio Contacto -->
+      <section class="contain__contact">
+        <div class="contain__contact-box container">
+          <div class="contain__contact-group">
+            <div class="contain__navigation-logo">
+              <a href="" class="contain__navigation-link">
+                <img src="images/Logo.png" alt="logo" />
+              </a>
+            </div>
+            <nav class="contain__contact-menu">
+              <a href="#" class="contain__contact-link">Quienes somos</a
+              ><a href="#" class="contain__contact-link"
+                >Politica de privacidad</a
+              ><a href="#" class="contain__contact-link"
+                >Programa de fidelidad</a
+              ><a href="#" class="contain__contact-link">Nuestras tiendas</a
+              ><a href="#" class="contain__contact-link"
+                >Quiero ser franquiciado</a
+              ><a href="#" class="contain__contact-link">Anuncie aqui</a>
+            </nav>
+          </div>
+          <div class="contain__contact-form">
+            <h4 class="contain__contact-subtitle">Hable con nosotros</h4>
+            <form action="">
+              <input type="text" placeholder="Nombre" />
+              <textarea
+                name="message"
+                placeholder="Escribe tu mensage"
+              ></textarea>
+              <button class="contain__contact-btn btn" type="submit">
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Fin contacto -->
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <footer class="foot">
+      <!-- <p class="foot__text">
+        Desarrollado por <span>Luis Fructuoso</span> (2022)
+      </p> -->
+    </footer>
+    <!-- Start Footer -->
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Js local -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

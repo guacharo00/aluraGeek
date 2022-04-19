@@ -132,6 +132,9 @@
     }
 
     &-btn {
+      display: block;
+      width: fit-content;
+      font-size: 1.2rem;
       background-color: var(--clr-primary);
       color: #fff;
       margin-bottom: 1rem;

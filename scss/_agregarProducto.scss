@@ -1,0 +1,183 @@
+@use "base" as *;
+
+.contain {
+  &__agregar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+
+    &-title {
+      font-size: 2.3rem;
+      color: var(--clr-text);
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    form {
+      width: 90%;
+      //   text-align: center;
+
+      @media screen and (min-width: 660px) {
+        // width: 55%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 50%;
+      }
+
+      input {
+        display: block;
+        border: none;
+        outline: none;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        padding: 2rem 3rem;
+
+        &::placeholder {
+          font-size: 1.6rem;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      background-color: var(--clr-primary);
+      padding: 1.5rem 4rem;
+      color: #fff;
+
+      @media screen and (min-width: 1024px) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: var(--clr-primary);
+      }
+    }
+
+    &-group {
+      @media screen and (min-width: 660px) {
+        display: flex;
+      }
+    }
+
+    &-box {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: 660px) {
+        flex: 1;
+      }
+
+      @media screen and (min-width: 660px) {
+        flex: 1.2;
+      }
+      .add-icon {
+        position: absolute;
+        font-size: 3.5rem;
+        top: 2.5rem;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.4);
+
+        @media screen and (min-width: 660px) {
+          display: none;
+        }
+      }
+      .img-icon {
+        display: none;
+        position: absolute;
+        font-size: 3.5rem;
+        top: 4rem;
+        left: 45%;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.4);
+
+        @media screen and (min-width: 660px) {
+          display: block;
+        }
+      }
+    }
+
+    &-img {
+      width: 100%;
+      border: 2px dashed rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      padding: 6rem 3rem;
+      cursor: pointer;
+      background-color: #fff;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      .mobile-p {
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.4);
+        margin-top: 3rem;
+
+        @media screen and (min-width: 660px) {
+          display: none;
+        }
+      }
+      .tablet-p {
+        display: none;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.4);
+        margin-top: 3rem;
+
+        @media screen and (min-width: 660px) {
+          display: block;
+        }
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @media screen and (min-width: 660px) {
+        flex: 1.5;
+      }
+
+      @media screen and (min-width: 1024px) {
+        flex: 1;
+      }
+
+      p {
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        color: var(--clr-text);
+      }
+    }
+
+    &-dispositivo {
+      background-color: transparent;
+      border: 1px solid var(--clr-primary);
+      color: var(--clr-primary);
+
+      &:hover {
+        background-color: var(--clr-primary);
+        color: #fff;
+      }
+    }
+
+    &-desc {
+      border: none;
+      outline: none;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      padding: 2rem 3rem;
+      resize: none;
+
+      &::placeholder {
+        font-size: 1.6rem;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

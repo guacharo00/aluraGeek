@@ -1,0 +1,59 @@
+@use "base" as *;
+
+.contain {
+  &__producto {
+    &-container {
+      padding-top: 0;
+
+      @media screen and (min-width: 660px) {
+        padding-top: 2rem;
+      }
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 4rem;
+
+      @media screen and (min-width: 660px) {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    &-img {
+      @media screen and (min-width: 660px) {
+        flex: 1;
+      }
+    }
+
+    &-desc {
+      @media screen and (min-width: 660px) {
+        flex: 1.5;
+      }
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--clr-text);
+      margin-bottom: 1rem;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 3rem;
+      }
+    }
+
+    &-price {
+      font-size: 1.6rem;
+      color: var(--clr-text);
+      margin-bottom: 1rem;
+    }
+
+    &-paragraph {
+      font-size: 1.4rem;
+      color: var(--clr-text);
+    }
+  }
+}

@@ -1,12 +1,13 @@
 @use "base" as *;
 
 .contain {
+  background-color: #f4f4f4;
   &__starwars,
   &__consolas,
   &__diversos {
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
   }
 
   &__boxes {
@@ -41,6 +42,7 @@
     }
   }
   &__box {
+    margin-bottom: 6rem;
     &:nth-last-child(-n + 2) {
       display: none;
 
@@ -128,7 +130,7 @@
     }
 
     &-link {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.7);
       margin-bottom: 1.5rem;
       transform: scale(1, 1);
@@ -144,7 +146,7 @@
     }
 
     &-subtitle {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: rgba(0, 0, 0, 0.7);
       margin-bottom: 1rem;
       margin-top: 3rem;
@@ -162,19 +164,19 @@
           margin-bottom: 1.5rem;
           border: none;
           outline: none;
-          padding: 2.5rem 1rem;
+          padding: 2rem 1rem;
           border-bottom: 1px solid rgba(0, 0, 0, 0.3);
           border-radius: 3px;
 
           &::placeholder {
             font-family: var(--font-stack);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: rgba(0, 0, 0, 0.5);
           }
         }
 
         textarea {
-          padding: 3.5rem 1rem;
+          padding: 2rem 1rem;
           resize: none;
         }
       }
