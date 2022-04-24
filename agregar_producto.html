@@ -34,9 +34,9 @@
     <main class="contain">
       <div class="container contain__producto-container">
         <section class="contain__agregar">
-          <form action="">
+          <form id="form-agregar" action="">
             <h3 class="contain__agregar-title">Agregar nuevo producto</h3>
-            <div class="contain__agregar-group">
+            <div class="contain__agregar-group" required>
               <div class="contain__agregar-box">
                 <div name="addImage" id="" class="contain__agregar-img">
                   <p class="mobile-p">Agregar una imagen para el producto</p>
@@ -54,22 +54,48 @@
                 </button>
               </div>
             </div>
-            <input
-              class="contain__agregar-input"
-              type="text"
-              placeholder="Nombre del producto"
-            />
-            <input
-              class="contain__agregar-input"
-              type="text"
-              placeholder="Precio del producto"
-            />
-            <textarea
-              name="desc"
-              id=""
-              class="contain__agregar-desc"
-              placeholder="Descripcion del producto"
-            ></textarea>
+            <div class="contain__contact-formgroup" id="grupo-agregar">
+              <div class="contain__contact-input">
+                <input
+                  type="text"
+                  placeholder="Nombre del producto"
+                  name="nombre-producto"
+                  id="nombre-producto"
+                  required
+                />
+              </div>
+              <p class="contain__contact-error">
+                Este campo es requerido, Solo caracteres A-Z, No caracteres
+                Especiales.
+              </p>
+            </div>
+            <div class="contain__contact-formgroup" id="grupo-precio">
+              <div class="contain__contact-input">
+                <input
+                  type="number"
+                  placeholder="Precio del producto"
+                  name="precio"
+                  id="precio"
+                  required
+                />
+              </div>
+              <p class="contain__contact-error">
+                Este campo es requerido, Solo numeros
+              </p>
+            </div>
+            <div class="contain__contact-formgroup" id="grupo-desc">
+              <div class="contain__contact-input">
+                <textarea
+                  name="desc"
+                  id="desc"
+                  class="contain__agregar-desc"
+                  placeholder="Descripcion del producto"
+                ></textarea>
+              </div>
+              <p class="contain__contact-error">
+                Este campo es requerido, Solo Texto
+              </p>
+            </div>
             <button type="submit" class="btn contain__agregar-btn">
               Agregar producto
             </button>
@@ -135,6 +161,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- Js local -->
+    <script src="js/validaciones.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
