@@ -35,9 +35,33 @@
       <div class="container contain__producto-container">
         <section class="contain__form">
           <h3 class="contain__form-title">Iniciar seccion</h3>
-          <form action="">
-            <input type="email" placeholder="Escriba su correo electronico" />
-            <input type="password" placeholder="Escriba su contrasena" />
+          <form id="form-login" action="">
+            <div class="contain__contact-formgroup" id="grupo-email">
+              <div class="contain__contact-input">
+                <input
+                  type="email"
+                  placeholder="Escriba su correo electronico"
+                  name="correo"
+                  id="correo"
+                  required
+                />
+              </div>
+              <p class="contain__contact-error">
+                Ingrese un correo electronico valido.
+              </p>
+              <div class="contain__contact-formgroup" id="grupo-password">
+                <div class="contain__contact-input">
+                  <input
+                    type="text"
+                    placeholder="Escriba su contraseña"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <p class="contain__contact-error">
+                  La contraseña debe ser de minimo 6 digitos.
+                </p>
             <button type="submit" class="btn contain__form-btn">Entrar</button>
           </form>
         </section>
@@ -101,6 +125,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- Js local -->
+    <script src="js/validaciones.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

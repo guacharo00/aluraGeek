@@ -383,6 +383,7 @@ body {
 .contain__contact-form form input[type=text],
 .contain__contact-form form textarea {
   margin-bottom: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
   border: none;
   outline: none;
   padding: 2rem 1rem;
@@ -407,6 +408,13 @@ body {
 .contain__contact-btn:hover {
   background-color: transparent;
   color: var(--clr-primary);
+}
+.contain__contact-error {
+  display: none;
+  font-size: 1.2rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  color: orangered;
 }
 
 .container {

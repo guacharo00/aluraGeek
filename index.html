@@ -246,18 +246,34 @@
           </div>
           <div class="contain__contact-form">
             <h4 class="contain__contact-subtitle">Hable con nosotros</h4>
-            <form action="">
-              <input
-                type="text"
-                placeholder="Nombre"
-                required
-                title="El nombre es requerido"
-              />
-              <textarea
-                name="message"
-                placeholder="Escribe tu mensage"
-                required
-              ></textarea>
+            <form id="form-footer" action="">
+              <div class="contain__contact-formgroup" id="grupo-nombre">
+                <div class="contain__contact-input">
+                  <input
+                    type="text"
+                    placeholder="Nombre"
+                    name="nombre"
+                    id="nombre"
+                    required
+                  />
+                </div>
+                <p class="contain__contact-error">
+                  Este campo es requerido, Solo caracteres A-Z, No caracteres
+                  Especiales.
+                </p>
+              </div>
+              <div class="contain__contact-formgroup" id="grupo-mensaje">
+                <div class="contain__contact-input">
+                  <textarea
+                    name="mensage"
+                    id="mensaje"
+                    placeholder="Escribe tu mensage"
+                    required
+                  ></textarea>
+                </div>
+                <p class="contain__contact-error">Este campo es requerido.</p>
+              </div>
+
               <button class="contain__contact-btn btn" type="submit">
                 Enviar mensaje
               </button>
@@ -287,6 +303,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- Js local -->
+    <script src="js/validaciones.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
